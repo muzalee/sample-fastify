@@ -11,6 +11,7 @@
     "build": "tsc -p tsconfig.json",
     "start": "node -r ./tsconfig-paths-bootstrap.js dist/server.js",
     "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint --fix .",
     "format": "prettier --write ."
   },
   "dependencies": {
