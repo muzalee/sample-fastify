@@ -4,8 +4,8 @@ import {
   sendSuccessResponse,
 } from '@/helpers/response.helper';
 import { v1Routes } from '@/routes/v1';
-import config from '@/configs/index';
 import cors from '@fastify/cors';
+import { appConfig } from './configs';
 
 const server = fastify({
   logger: true,
@@ -38,7 +38,7 @@ const startServer = async () => {
 
     registerRoutes();
 
-    const port = Number(config.PORT) || 3000;
+    const port = Number(appConfig.PORT) || 3000;
     server.listen({ port, host: '0.0.0.0' });
   } catch (error) {
     server.log.error(error);
