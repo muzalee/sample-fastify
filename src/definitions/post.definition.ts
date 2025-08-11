@@ -1,5 +1,4 @@
 export interface Post {
-  id: number;
   title: string;
   body: string;
   tags: string[];
@@ -9,6 +8,10 @@ export interface Post {
   };
   views: number;
   userId: number;
+}
+
+export interface PostWithId extends Post {
+  id: number; // this is for sample data only, mongodb will have their own _id field
 }
 
 export interface PostQueryParams {

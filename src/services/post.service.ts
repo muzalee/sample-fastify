@@ -1,14 +1,16 @@
 import { BASE_CONSTANTS } from '@/constants';
 import { Logger } from '@/utils/logger.util';
 import { PaginatedResult } from '@/definitions/base.definition';
-import { Post, PostQueryParams } from '@/definitions/post.definition';
+import { PostQueryParams, PostWithId } from '@/definitions/post.definition';
 import sampleData from '@/data/sample.json';
 
 export class PostService {
   private readonly logger = Logger.forContext(PostService.name);
-  private readonly posts: Post[] = sampleData as Post[];
+  private readonly posts: PostWithId[] = sampleData as PostWithId[];
 
-  async getPosts(params: PostQueryParams): Promise<PaginatedResult<Post>> {
+  async getPosts(
+    params: PostQueryParams,
+  ): Promise<PaginatedResult<PostWithId>> {
     try {
       const {
         search,

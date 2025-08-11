@@ -34,6 +34,9 @@ const setupErrorHandlers = () => {
 
 const startServer = async () => {
   try {
+    // await mongoose.connect(appConfig.MONGODB_URI ?? '');
+    // server.log.info(`MongoDB connected successfully`);
+
     setupErrorHandlers();
 
     registerRoutes();
