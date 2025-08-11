@@ -34,6 +34,7 @@ const setupErrorHandlers = () => {
 
 const startServer = async () => {
   try {
+    // NOTE: MongoDB
     // await mongoose.connect(appConfig.MONGODB_URI ?? '');
     // server.log.info(`MongoDB connected successfully`);
 

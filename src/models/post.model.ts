@@ -1,6 +1,7 @@
 import { Post } from '@/definitions/post.definition';
 import mongoose, { Document, Schema, Types } from 'mongoose';
 
+// NOTE: MongoDB
 export interface PostDocument extends Post, Document {
   _id: Types.ObjectId;
   createdAt: Date;
